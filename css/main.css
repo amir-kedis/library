@@ -579,4 +579,14 @@ button {
 }
 .book .btn:last-child {
   justify-self: end;
+}
+
+.footer {
+  padding: 30px;
+  text-align: center;
+  font-size: 12px;
+}
+.footer a {
+  color: #00839f;
+  font-weight: 700;
 }/*# sourceMappingURL=main.css.map */

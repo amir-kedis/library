@@ -253,3 +253,14 @@ $container-sizes: (
     }
   }
 }
+
+// footer
+.footer {
+  padding: 30px;
+  text-align: center;
+  font-size: 12px;
+  a {
+    color: #00839f;
+    font-weight: 700;
+  }
+}
