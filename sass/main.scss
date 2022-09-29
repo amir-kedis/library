@@ -41,25 +41,27 @@ p {
 }
 
 ul {
-    padding: 0;
-    list-style: none;
+  padding: 0;
+  list-style: none;
 }
 
 a {
+  text-decoration: none;
+  color: inherit;
+
+  &:active,
+  &:visited {
     text-decoration: none;
     color: inherit;
-
-    &:active, &:visited {
-        text-decoration: none;
-        color: inherit;
-    }
+  }
 }
 
-input, button {
-    border: none;
-    outline: none;
-    background-color: transparent;
-    color: inherit;
+input,
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: inherit;
 }
 
 // container classes
@@ -82,15 +84,15 @@ input, button {
 $breakpoints: (
   na: 0px,
   // For BS grid
-    xs: 320px,
+  xs: 320px,
   // Smartphone
-    sm: 600px,
+  sm: 600px,
   // Tablets
-    md: 900px,
+  md: 900px,
   // Tablets Landscape and small desktops
-    lg: 1200px,
+  lg: 1200px,
   // Desktops
-    xl: 1800px,
+  xl: 1800px,
   // Large Desktop
 );
 
@@ -102,7 +104,7 @@ $container-sizes: (
   sm: map-get($breakpoints, sm) - 30px,
   md: map-get($breakpoints, md) - 40px,
   lg: map-get($breakpoints, lg) - 50px,
-  xl: map-get($breakpoints, xl) - 400px
+  xl: map-get($breakpoints, xl) - 400px,
 );
 
 .container {
@@ -168,10 +170,23 @@ $container-sizes: (
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
+  padding: 12px 30px;
   &--add {
     background-color: #fff;
     color: #000;
-    padding: 12px 30px;
+  }
+  &--green {
+    background-color: var(--btn-light-g-c);
+    font-size: 10px;
+    font-weight: 700;
+  }
+  &--yellow {
+    background-color: var(--btn-light-y-c);
+    font-size: 10px;
+    font-weight: 700;
+  }
+  &--delete {
+    fill: var(--btn-r-c);
   }
 }
 
@@ -183,14 +198,58 @@ $container-sizes: (
 }
 
 .books-wrapper {
-    h2 {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 30px;
-    }
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
 }
 .books-grid {
   display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+}
+
+// book card
+.book {
+  background-color: #fff;
+  padding: 10px;
+  display: grid;
   gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 20%));
+
+  h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    width: 70%;
+    line-height: 24px;
+  }
+  .author {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--txt-c-s);
+  }
+  .page {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--txt-c-s);
+  }
+  .status {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--txt-c-s);
+    &--reading {
+      color: var(--status-g-c);
+    }
+    &--read {
+      color: var(--status-b-c);
+    }
+  }
+  .btn {
+    justify-self: center;
+    &:last-child {
+      justify-self: end;
+    }
+  }
 }
