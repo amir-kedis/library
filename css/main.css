@@ -326,6 +326,7 @@ template {
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: var(--bgc);
 }
 
 *,
@@ -342,6 +343,7 @@ h5,
 h6,
 p {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 ul {
@@ -473,4 +475,20 @@ input, button {
   .container-xl {
     max-width: 1400px;
   }
+}
+
+.app {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #fff;
+}
+.header h1 {
+  font-weight: 600;
+  font-size: 20px;
 }/*# sourceMappingURL=main.css.map */

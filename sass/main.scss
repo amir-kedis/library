@@ -19,6 +19,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: var(--bgc);
 }
 
 // Globals
@@ -36,6 +37,7 @@ h5,
 h6,
 p {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 ul {
@@ -133,5 +135,27 @@ $container-sizes: (
         max-width: container(#{nth(nth($container-sizes, $j), 1)});
       }
     }
+  }
+}
+
+// layout
+
+.app {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+// header
+
+.header {
+  $pad: 30px;
+  padding-top: $pad;
+  padding-bottom: $pad;
+  background-color: #fff;
+
+  h1 {
+    font-weight: 600;
+    font-size: 20px;
   }
 }
