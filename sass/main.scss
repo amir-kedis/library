@@ -1,1 +1,22 @@
 @use 'norm';
+
+// colors
+:root {
+    --txt-c: #000000;
+    --txt-c-s: #757575;
+    --bgc: #E5F6FF;
+    --red-c: #F52222;
+    --status-b-c: #00839F;
+    --status-g-c: #008A27;
+    --btn-light-g-c: #E5FFEB;
+    --btn-light-y-c: #FBFFE5;
+    --btn-g-c: #00DF74;
+    --btn-r-c: #DF0000;
+}
+
+// font
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
