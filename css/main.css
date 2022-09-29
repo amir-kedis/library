@@ -314,16 +314,53 @@ template {
 :root {
   --txt-c: #000000;
   --txt-c-s: #757575;
-  --bgc: #E5F6FF;
-  --red-c: #F52222;
-  --status-b-c: #00839F;
-  --status-g-c: #008A27;
-  --btn-light-g-c: #E5FFEB;
-  --btn-light-y-c: #FBFFE5;
-  --btn-g-c: #00DF74;
-  --btn-r-c: #DF0000;
+  --bgc: #e5f6ff;
+  --red-c: #f52222;
+  --status-b-c: #00839f;
+  --status-g-c: #008a27;
+  --btn-light-g-c: #e5ffeb;
+  --btn-light-y-c: #fbffe5;
+  --btn-g-c: #00df74;
+  --btn-r-c: #df0000;
 }
 
 body {
   font-family: "Poppins", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h2,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:active, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+input, button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: inherit;
 }/*# sourceMappingURL=main.css.map */
