@@ -511,4 +511,16 @@ input, button {
   display: flex;
   justify-content: center;
   padding: 30px;
+}
+
+.books-wrapper h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.books-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 20%));
 }/*# sourceMappingURL=main.css.map */
