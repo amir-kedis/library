@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,58 @@
     <link rel="stylesheet" href="./css/main.css">
     <script src="./app.js" defer></script>
 </head>
+
 <body>
-    
+    <div class="app">
+        <header class="header">
+            <div class="container">
+                📘 Library
+            </div>
+        </header>
+        <main class="main">
+            <div class="btn-wrapper">
+                <button id="addBookBtn" class="btn">➕ add a book</button>
+            </div>
+            <div class="books-wrapper">
+                <div class="container">
+                    <h2>📚 Your Books</h2>
+                    <div class="books-grid">
+                        <div class="book">
+                            <h3>The Subtle Art Of Not Giving a Fuck</h3>
+                            <p class="author">By Mark Manson</p>
+                            <p class="page">224 pages</p>
+                            <p class="status status--reading">Currently reading</p>
+                            <button class="btn btn--green">✔️ Finished?</button>
+                            <button class="btn">
+                                <svg class="btn-delete" width="30" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="book">
+                            <h3>The Subtle Art Of Not Giving a Fuck</h3>
+                            <p class="author">By Mark Manson</p>
+                            <p class="page">224 pages</p>
+                            <p class="status status--read">read</p>
+                            <button class="btn btn--green">✔️ reread?</button>
+                            <button class="btn">
+                                <svg class="btn-delete" width="30" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            created by <a href="https://github.com/amir-kedis">Amir Kedis</a>
+        </footer>
+    </div>
 </body>
+
 </html>
