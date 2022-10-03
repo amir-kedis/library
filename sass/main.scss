@@ -188,6 +188,14 @@ $container-sizes: (
   &--delete {
     fill: var(--btn-r-c);
   }
+  &--add-book {
+    min-width: 200px;
+    background-color: var(--btn-g-c);
+  }
+  &--cancel {
+    min-width: 200px;
+    background-color: var(--btn-r-c);
+  }
 }
 
 // main
@@ -262,5 +270,61 @@ $container-sizes: (
   a {
     color: #00839f;
     font-weight: 700;
+  }
+}
+// overlay
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.35);
+  display: grid;
+  place-items: center;
+}
+.add-book-box {
+  background-color: #fff;
+  padding: 30px;
+  min-width: 60vw;
+
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+  }
+  ul {
+    max-width: 40vw;
+    margin: 0 auto;
+  }
+  li {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+
+    label {
+      font-size: 20px;
+      font-weight: 500;
+    }
+    [type="text"],
+    [type="tel"] {
+      background-color: var(--bgc);
+      padding: 15px;
+    }
+  }
+  .input--check {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+  }
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 30px;
   }
 }

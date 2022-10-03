@@ -520,6 +520,14 @@ button {
 .btn--delete {
   fill: var(--btn-r-c);
 }
+.btn--add-book {
+  min-width: 200px;
+  background-color: var(--btn-g-c);
+}
+.btn--cancel {
+  min-width: 200px;
+  background-color: var(--btn-r-c);
+}
 
 .btn-wrapper {
   display: flex;
@@ -589,4 +597,59 @@ button {
 .footer a {
   color: #00839f;
   font-weight: 700;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.35);
+  display: grid;
+  place-items: center;
+}
+
+.add-book-box {
+  background-color: #fff;
+  padding: 30px;
+  min-width: 60vw;
+}
+.add-book-box h3 {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+.add-book-box ul {
+  max-width: 40vw;
+  margin: 0 auto;
+}
+.add-book-box li {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.add-book-box li label {
+  font-size: 20px;
+  font-weight: 500;
+}
+.add-book-box li [type=text],
+.add-book-box li [type=tel] {
+  background-color: var(--bgc);
+  padding: 15px;
+}
+.add-book-box .input--check {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+}
+.add-book-box .controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 30px;
 }/*# sourceMappingURL=main.css.map */
