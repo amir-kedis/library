@@ -48,7 +48,7 @@ let library = [
         author: "Jordan B. Peterson",
         pages: 409,
         isRead: true
-    }, 
+    },
     {
         name: "In Defense of Food: An Eater's Manifesto",
         author: "Michael Pollan",
@@ -110,6 +110,7 @@ function updateUI() {
                 </svg>
             </button>
                         `;
-        booksGrid.appendChild(bookDiv)        
+        bookDiv.dataset.bookName = bookName;
+        booksGrid.appendChild(bookDiv)
     }
 }
