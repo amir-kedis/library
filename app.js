@@ -113,4 +113,23 @@ function updateUI() {
         bookDiv.dataset.bookName = bookName;
         booksGrid.appendChild(bookDiv)
     }
+
+    mountDeleteBtns();
+}
+
+function mountDeleteBtns() {
+    document.querySelectorAll(".btn--delete").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            deleteBook(e.target)
+        })
+    })
+}
+
+function deleteBook(el) {
+    const bookName = el.closest(".book").dataset.bookName;
+
+    const bookIndex = library.findIndex((el) => el.name === bookName);
+
+    library.splice(bookIndex, 1);
+    updateUI();
 }
