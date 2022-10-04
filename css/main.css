@@ -602,7 +602,7 @@ button {
 
 .overlay {
   visibility: hidden;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -626,6 +626,11 @@ button {
   max-width: 40vw;
   margin: 0 auto;
 }
+@media screen and (max-width: 768px) {
+  .add-book-box ul {
+    max-width: none;
+  }
+}
 .add-book-box li {
   display: flex;
   flex-direction: column;
@@ -640,6 +645,7 @@ button {
 .add-book-box li [type=tel] {
   background-color: var(--bgc);
   padding: 15px;
+  width: 100%;
 }
 .add-book-box .input--check {
   display: flex;
@@ -654,6 +660,7 @@ button {
   justify-content: center;
   margin-top: 40px;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .show {
