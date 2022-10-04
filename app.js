@@ -80,7 +80,7 @@ function updateUI() {
             <p class="author">By ${bookAuthor}</p>
             <p class="page">${bookPages} pages</p>
             <p class="status status--${!bookStatus ? "reading" : "read"}">${!bookStatus ? "Currently reading" : "read"}</p>
-            <button class="btn btn--${!bookStatus ? "green" : "yellow"}">✔️ ${!bookStatus ? "finished?" : "reread?"}</button>
+            <button class="btn btn--changeStatus btn--${!bookStatus ? "green" : "yellow"}">✔️ ${!bookStatus ? "finished?" : "reread?"}</button>
             <button class="btn">
                 <svg class="btn--delete" width="30" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24">
@@ -94,6 +94,7 @@ function updateUI() {
     }
 
     mountDeleteBtns();
+    mountChangeStatusBtns();
 }
 
 function mountDeleteBtns() {
@@ -104,11 +105,29 @@ function mountDeleteBtns() {
     })
 }
 
+function mountChangeStatusBtns() {
+    document.querySelectorAll(".btn--changeStatus").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            changeStatus(e.target)
+        })
+    });
+}
+
 function deleteBook(el) {
     const bookName = el.closest(".book").dataset.bookName;
 
     const bookIndex = library.findIndex((el) => el.name === bookName);
 
     library.splice(bookIndex, 1);
+    updateUI();
+}
+
+function changeStatus(el) {
+    const bookName = el.closest(".book").dataset.bookName;
+
+    const bookIndex = library.findIndex((el) => el.name === bookName);
+
+    library[bookIndex].changeStatus();
+
     updateUI();
 }
