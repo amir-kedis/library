@@ -25,36 +25,11 @@ function toggleOverlay() {
 }
 
 let library = [
-    {
-        name: "Atomic Habits",
-        author: "James Clear",
-        pages: 280,
-        isRead: true
-    },
-    {
-        name: "eat that frog",
-        author: "James Clear",
-        pages: 280,
-        isRead: true
-    },
-    {
-        name: "Sapiens: A Brief History of Humankind",
-        author: "Yuval Noah Harari",
-        pages: 512,
-        isRead: false
-    },
-    {
-        name: "12 Rules for Life: An Antidote to Chaos",
-        author: "Jordan B. Peterson",
-        pages: 409,
-        isRead: true
-    },
-    {
-        name: "In Defense of Food: An Eater's Manifesto",
-        author: "Michael Pollan",
-        pages: 205,
-        isRead: false
-    },
+    new Book("Atomic Habits", "James Clear", 280, true),
+    new Book("eat that frog", "James Clear", 280, false),
+    new Book("Sapiens: A Brief History of Humankind", "Yuval Noah Harari", 512, true),
+    new Book("12 Rules for Life: An Antidote to Chaos", "Jordan B. Peterson", 409, false),
+    new Book("In Defense of Food: An Eater's Manifesto", "Michael Pollan", 205, false),
 ]
 
 function Book(name, author, pages, isRead) {
@@ -62,6 +37,10 @@ function Book(name, author, pages, isRead) {
     this.author = author;
     this.pages = pages;
     this.isRead = isRead;
+}
+
+Book.prototype.changeStatus = function () {
+    this.isRead = !this.isRead;
 }
 
 function addBookToLibrary() {
