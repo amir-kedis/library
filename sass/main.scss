@@ -313,7 +313,7 @@ $container-sizes: (
       font-weight: 500;
     }
     [type="text"],
-    [type="tel"] {
+    [type="number"] {
       background-color: var(--bgc);
       padding: 15px;
       width: 100%;
@@ -338,4 +338,16 @@ $container-sizes: (
 
 .show {
   visibility: visible;
+}
+
+.error {
+  color: var(--red-c);
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 5px;
+  display: none;
+
+  &.show {
+    display: block;
+  }
 }
