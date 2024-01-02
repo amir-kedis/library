@@ -71,21 +71,24 @@
                 <ul class="inputs">
                     <li class="input">
                         <label for="bookName">Book Name</label>
-                        <input autofocus autocomplete="off" type="text" name="bookName" id="bookName"
-                            placeholder="Eat That Frog">
+                        <input required autofocus autocomplete="off" minlength="3" type="text" name="bookName"
+                            id="bookName" placeholder="Eat That Frog">
                     </li>
                     <li class="input">
                         <label for="bookAuthor">Author</label>
-                        <input autocomplete="off" type="text" name="bookAuthor" id="bookAuthor" placeholder="Someone">
+                        <input required autocomplete="off" type="text" maxlength="50" name="bookAuthor" id="bookAuthor"
+                            placeholder="Someone">
                     </li>
                     <li class="input">
                         <label for="pages">NO. Of Pages</label>
-                        <input autocomplete="off" type="tel" name="pages" id="pages" placeholder="300">
+                        <input required autocomplete="off" type="number" min="1" max="10000" name="pages" id="pages"
+                            placeholder="300">
                     </li>
                     <li class="input input--check">
-                        <input autocomplete="off" type="checkbox" name="status" id="status">
+                        <input required autocomplete="off" type="checkbox" name="status" id="status">
                         <label for="status">Read?</label>
                     </li>
+                    <div class="error"></div>
                 </ul>
                 <div class="controls">
                     <button id="addABookBtn" class="btn btn--add-book">ADD</button>

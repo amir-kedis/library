@@ -642,7 +642,7 @@ button {
   font-weight: 500;
 }
 .add-book-box li [type=text],
-.add-book-box li [type=tel] {
+.add-book-box li [type=number] {
   background-color: var(--bgc);
   padding: 15px;
   width: 100%;
@@ -665,4 +665,15 @@ button {
 
 .show {
   visibility: visible;
+}
+
+.error {
+  color: var(--red-c);
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 5px;
+  display: none;
+}
+.error.show {
+  display: block;
 }/*# sourceMappingURL=main.css.map */
